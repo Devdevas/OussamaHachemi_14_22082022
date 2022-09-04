@@ -1,0 +1,33 @@
+.current-employees-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 10px 0
+}
+.current-employees-header select {
+  margin: 0 10px;
+}
+
+.table-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.table-footer div {
+  display: flex;
+  align-items: center;
+}
+
+.list-page {
+  background-color: rgb(207, 207, 207);
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+h1{
+  margin-bottom: 30px;
+}
