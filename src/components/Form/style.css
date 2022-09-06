@@ -1,65 +1,71 @@
 .form-bg {
-  background-color: #e5e8ec;
-  border-radius: 5px;
-  max-width: 450px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 0;
+   background-color: rgb(232, 236, 239);
+   border-radius: 5px;
+   max-width: 450px;
+   margin: 50px auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px 10px;
 }
 
 form {
-  width: 85%;
+   width: 85%;
+   color: #201f1b;
+   display: flex;
+   flex-direction: column;
 }
 
 .field {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 30px;
-  font-size: 15px;
-  font-weight: 600;
+   display: flex;
+   flex-direction: column;
+   margin: 20px 30px;
+   font-size: 15px;
+   font-weight: 600;
 }
 
 input,
 .Dropdown-control.dropdown {
-  border: 1px solid rgb(204, 204, 204);
-  border-radius: 5px;
-  padding: 8px 10px;
-  font-size: 15px;
-  margin-top: 5px;
+   border: 1px solid rgb(190, 200, 206);
+   border-radius: 5px;
+   padding: 8px 10px;
+   font-size: 15px;
+   margin-top: 5px;
 }
 
-.react-datepicker__input-container input{
-  max-width: 300px;
-  width: 100%;
+.react-datepicker__input-container input {
+   max-width: 300px;
+   width: 100%;
 }
 
 .Dropdown-control.dropdown,
 .Dropdown-menu.menu {
-  font-weight: 500;
+   font-weight: 500;
 }
 
 .address {
-  border: 1px solid rgb(204, 204, 204);
-  border-radius: 5px;
-  max-width: 380px;
-  width: 100%;
+   border: 1px solid rgb(190, 200, 206);
+   border-radius: 5px;
+   max-width: 380px;
+   width: 100%;
 }
 
 .address legend {
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 0 10px;
+   text-align: center;
+   font-size: 15px;
+   font-weight: 500;
+   padding: 0 10px;
 }
 
 .save-button {
-  padding: 8px 30px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 15px;
-  border: 1px solid rgb(204, 204, 204);
-  border-radius: 5px;
-  margin: 20px;
+   padding: 8px 30px;
+   text-align: center;
+   font-weight: bold;
+   font-size: 15px;
+   border: 1px solid rgb(190, 200, 206);
+   border-radius: 5px;
+   margin: 20px 35%;
+   background-color: #004c86;
+   color: white;
+   cursor: pointer;
 }

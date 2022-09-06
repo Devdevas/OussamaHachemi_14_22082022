@@ -1,21 +1,24 @@
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(225, 225, 225);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   
 }
 
 header img {
-  width: 180px;
-  padding: 20px;
+   width: 180px;
+   padding: 20px;
 }
 
-a{
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 20px;
+a {
+   text-decoration: none;
+   font-weight: 500;
+   margin: 0 20px;
+   color: #201f1b;
+   padding: 3px 0;
 }
 
 .active {
-  border-bottom: 2px solid;
+   border-bottom: 2px solid;
+   color: #004c86;
 }

@@ -1,6 +1,5 @@
 import "./style.css";
-import { useEffect, useState } from "react";
-import { FetchStates } from "../../utils/statesList";
+import { statesList } from "../../utils/statesList";
 import { departmentList } from "../../utils/departmentList";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
@@ -8,9 +7,14 @@ import { create } from "../../features/Employees";
 import { useDispatch } from "react-redux";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Modal from "@ousshmi/react-modal";
+import { Navigate } from "react-router-dom";
+import { useState } from "react";
+// import closeIcon from "../../assets/close-icon.png";
 
 function Form() {
    const dispatch = useDispatch();
+
    const [firstName, setFirstName] = useState();
    const [lastName, setLastName] = useState();
    const [dateOfBirth, setDateOfBirth] = useState();
@@ -23,18 +27,12 @@ function Form() {
 
    const [startdateValue, setStartdateValue] = useState();
    const [birthdateValue, setBirthdateValue] = useState();
-   // const [showModal, setShowModal] = useState(false);
 
-   const [statesList, setStatesList] = useState();
-   useEffect(() => {
-      const getStates = async () => {
-         const { states } = await FetchStates();
-         setStatesList(states);
-      };
-      getStates();
-   }, []);
+   const [showModal, setShowModal] = useState(false);
+   const [navigateTo, setNavigateTo] = useState(false);
 
-   function saveEmployee() {
+   function saveEmployee(e) {
+      e.preventDefault();
       dispatch(
          create(
             firstName,
@@ -48,17 +46,22 @@ function Form() {
             zipCode
          )
       );
-      // setShowModal(true);
+      setShowModal(true);
+      e.target.reset();
+      setStartdateValue("");
+      setBirthdateValue("");
+      setStates("");
+      setDepartment("");
    }
 
-   if (!statesList) {
-      return;
+   if (navigateTo) {
+      return <Navigate to="/employeesList" />;
    }
 
    return (
       <div>
          <div className="form-bg">
-            <form action="#">
+            <form onSubmit={saveEmployee}>
                <div className="field">
                   <label htmlFor="first-name">First Name</label>
                   <input
@@ -111,6 +114,7 @@ function Form() {
                         onChange={(option) => setStates(option.value)}
                         controlClassName="dropdown"
                         menuClassName="menu"
+                        value={states}
                      />
                   </div>
                   <div className="field">
@@ -130,27 +134,35 @@ function Form() {
                      onChange={(option) => setDepartment(option.value)}
                      controlClassName="dropdown"
                      menuClassName="menu"
+                     value={department}
                   />
                </div>
+               <button type="submit" className="save-button">
+                  Save
+               </button>
             </form>
-            <button onClick={saveEmployee} className="save-button">
-               Save
-            </button>
          </div>
-         {/* <Modal
+         <Modal
             show={showModal}
             onClose={() => setShowModal(false)}
             title="Create employee"
             message="Employee created successfully!"
-            headerBackground="#e5e8ec"
-            borderRadius='5px'
+            headerBackground="rgb(232, 236, 239)"
+            borderRadius="5px"
+            overflow="hidden"
             bodyFont="400 1em Montserrat"
+            closeButton
+            buttonBackground="#004c86"
+            buttonTextColor="white"
             buttonBorder="1px solid rgb(204, 204, 204)"
-            buttonPadding="5px 30px"
+            buttonPadding="8px 30px"
             buttonBorderRadius="5px"
             buttonFont="bold 15px Montserrat"
+            addNewButton
+            newButtonText="Current Employees"
             footerPadding="15px"
-         /> */}
+            onClickNewButton={() => setNavigateTo(true)}
+         />
       </div>
    );
 }

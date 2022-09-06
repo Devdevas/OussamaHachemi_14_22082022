@@ -1,1 +1,1 @@
-export const departmentList = ['Sales', 'Marketing', 'Engineering', 'Human Resources', 'Legal']
+export const departmentList = ["Sales", "Marketing", "Engineering", "Human Resources", "Legal"];
