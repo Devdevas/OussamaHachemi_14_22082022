@@ -6,55 +6,75 @@ h1 {
    margin-bottom: 30px;
 }
 
-.MuiPaper-root.css-11mde6h-MuiPaper-root {
-   box-shadow: none;
-   border-radius: 5px;
-}
-
-.MuiPaper-root.css-11mde6h-MuiPaper-root thead th[data-colindex="8"] {
-   border-radius: 0 5px 0 0;
-}
-
-.MuiPaper-root.css-11mde6h-MuiPaper-root thead th[data-colindex="0"] {
-   border-radius: 5px 0 0 0;
-}
-
-.MuiPaper-root.css-11mde6h-MuiPaper-root thead,
-.MuiPaper-root.css-11mde6h-MuiPaper-root thead th {
-   background-color: #004c86;
-   padding: 15px 0;
-}
-
 .MuiPaper-root thead th button,
 .MuiPaper-root .tss-bd2lw8-MUIDataTableHeadCell-sortActive,
 .tss-1h9t3sl-MUIDataTableHeadCell-sortAction
    .css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root.Mui-active {
    font-weight: bold;
    font-size: 12px;
-   color: white;
-}
-.MuiButtonBase-root
-   .css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root.Mui-active
-   .MuiTableSortLabel-icon {
-   color: white;
+   font-family: "Montserrat", sans-serif;
 }
 
 .MuiPaper-root div[role="toolbar"] {
-   background-color: rgb(241, 241, 241);
+   background-color: #004c86;
+   border-radius: 5px 5px 0 0;
+}
+
+.MuiPaper-root div[role="toolbar"] svg {
+   color: white;
+   opacity: 0.8;
+}
+
+div[data-test-id="Search"] {
+   color: white;
+   border-bottom: 1px solid white;
+   opacity: 0.5;
+   width: 60%;
+   font-family: "Montserrat", sans-serif;
+}
+
+div[data-test-id="Search"] input::placeholder {
+   opacity: 1;
+}
+
+.css-1a1fmpi-MuiInputBase-root-MuiInput-root:after {
+   border-bottom: 2px solid white;
+}
+
+.MuiPaper-root .css-rqglhn-MuiTable-root {
+   border-collapse: unset;
 }
 
 .MuiPaper-root tfoot td {
-   border-bottom: 1px solid rgb(241, 241, 241);
    padding-top: 5px;
    padding-bottom: 5px;
    background-color: rgb(232, 236, 239);
-   border-radius: 0 0 5px 5px;
+}
+
+.MuiPaper-root tfoot td p{
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
 }
 
 .MuiPaper-root tbody td {
    padding: 10px 16px;
 }
 
-.MuiToolbar-root div[data-test-id="Search"] {
-   width: 70%;
+.MuiPaper-root tbody td div {
+   font-family: "Montserrat", sans-serif;
+}
+
+table thead .tss-gm6zfk-MUIDataTableHeadCell-fixedHeader {
+   background-color: rgb(232, 236, 239);
+   padding: 15px 0;
+}
+
+.css-1bigob2 {
+   padding: 16px 0;
+}
+
+.dataTable {
+   overflow: hidden;
+   border-radius: 5px;
+   border: 0.2px solid rgba(0, 0, 0, 0.1);
 }

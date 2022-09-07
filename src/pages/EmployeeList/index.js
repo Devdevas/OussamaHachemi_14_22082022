@@ -38,7 +38,9 @@ function EmployeesList() {
          <Header />
          <main>
             <h1>Current Employees</h1>
-            <MUIDataTable columns={columns} data={employees} options={options} />
+            <div className="dataTable">
+               <MUIDataTable columns={columns} data={employees} options={options} />
+            </div>
          </main>
       </div>
    );

@@ -74,27 +74,33 @@ function Form() {
                   <label htmlFor="last-name">Last Name</label>
                   <input type="text" id="last-name" onInput={(e) => setLastName(e.target.value)} />
                </div>
-               <div className="field">
-                  <label htmlFor="birthdate">Date Of Birth</label>
-                  <DatePicker
-                     selected={birthdateValue}
-                     dateFormat="dd/MM/yyyy"
-                     onChange={(date) => {
-                        setBirthdateValue(date);
-                        setDateOfBirth(date.toLocaleDateString());
-                     }}
-                  />
+               <div>
+                  <label htmlFor="birthdate" className="field">
+                     Date Of Birth
+                     <DatePicker
+                        id="birthdate"
+                        selected={birthdateValue}
+                        dateFormat="dd/MM/yyyy"
+                        onChange={(date) => {
+                           setBirthdateValue(date);
+                           setDateOfBirth(date.toLocaleDateString());
+                        }}
+                     />
+                  </label>
                </div>
-               <div className="field">
-                  <label htmlFor="startdate">Start Date</label>
-                  <DatePicker
-                     selected={startdateValue}
-                     dateFormat="dd/MM/yyyy"
-                     onChange={(date) => {
-                        setStartdateValue(date);
-                        setStartDate(date.toLocaleDateString());
-                     }}
-                  />
+               <div>
+                  <label htmlFor="startdate" className="field">
+                     Start Date
+                     <DatePicker
+                        id="startdate"
+                        selected={startdateValue}
+                        dateFormat="dd/MM/yyyy"
+                        onChange={(date) => {
+                           setStartdateValue(date);
+                           setStartDate(date.toLocaleDateString());
+                        }}
+                     />
+                  </label>
                </div>
                <fieldset className="address">
                   <legend>Address</legend>
